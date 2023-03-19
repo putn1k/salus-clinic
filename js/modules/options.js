@@ -33,6 +33,19 @@ export const Options = {
     MethodGet: 'GET',
     MethodPost: 'POST',
   },
+  Map: {
+    Main: {
+      ID: 'company-map',
+      center: [ 53.198887, 44.980349 ],
+      zoom: 17,
+      customIcon: true,
+      customIconProperties: {
+        iconImageHref: `${window.location.protocol}//${window.location.host}/img/icon-pin.svg`,
+        iconImageSize: [ 40, 44 ],
+        iconImageOffset: [ -20, -40 ]
+      },
+    },
+  },
   Swiper: {
     Hero: {
       slidesPerView: 1,
@@ -48,5 +61,38 @@ export const Options = {
         clickable: false,
       },
     },
+    Staff: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      navigation: {
+        prevEl: '.staff__prev',
+        nextEl: '.staff__next',
+      },
+      pagination: {
+        el: '.staff__pagination',
+        clickable: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        992: {
+          slidesPerView: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+        },
+      },
+    },
+    Testimonials: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      autoplay: true,
+      loop: true,
+      pagination: {
+        el: '.testimonials__pagination',
+        type: 'fraction',
+      },
+    }
   },
 };

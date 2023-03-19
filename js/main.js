@@ -23,6 +23,10 @@ import {
   initMobileMenu
 } from './modules/mobile-menu.js';
 
+import {
+  initMap
+} from './modules/map.js';
+
 // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
 // в load следует добавить скрипты, не участвующие в работе первого экрана
 document.addEventListener( 'DOMContentLoaded', () => {
@@ -38,7 +42,10 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initMobileMenu();
     initModal();
     initSlider( '.hero-slider__block', Options.Swiper.Hero );
+    initSlider( '.staff__slider', Options.Swiper.Staff );
+    initSlider( '.testimonials__slider', Options.Swiper.Testimonials );
     initScrollTop();
     validateForms();
+    initMap();
   } );
 } );

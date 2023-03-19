@@ -1,0 +1,52 @@
+.features {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  &__banner {
+    color: var(--white);
+    background-color: var(--accent);
+    padding: 1.4em 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    align-items: center;
+    column-gap: 12px;
+
+    & svg {
+      color: var(--accent);
+      background-color: var(--cyan10);
+      border-radius: 50%;
+    }
+  }
+
+  @include media-min ($md) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    &__item {
+      grid-template-columns: 100px 1fr;
+      column-gap: 20px;
+
+      & svg {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

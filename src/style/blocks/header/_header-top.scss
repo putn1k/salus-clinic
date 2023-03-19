@@ -1,0 +1,33 @@
+.header-top {
+  display: none;
+
+  @include media-min ($xl) {
+    display: block;
+    background-color: var(--gray);
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__adress {
+      display: flex;
+      align-items: center;
+    }
+
+    &__modal-btn {
+      margin-left: 40px;
+      padding: 7px 18px;
+      color: var(--white);
+      background-color: var(--accent);
+      border: 1px solid var(--accent);
+      transition: color .15s ease-in-out, background-color .15s ease-in-out;
+
+      &:hover {
+        color: var(--black);
+        background-color: transparent;
+      }
+    }
+  }
+}

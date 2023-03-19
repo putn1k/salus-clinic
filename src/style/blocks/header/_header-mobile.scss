@@ -1,0 +1,47 @@
+.header-mobile {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  &[aria-hidden="false"] {
+    pointer-events: auto;
+
+    & .header-mobile__content {
+      display: block;
+    }
+  }
+
+  &__content {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    bottom: 0;
+    display: none;
+    width: 100%;
+    padding-top: 24px;
+    padding-bottom: 40px;
+    color: var(--black);
+    background-color: var(--white);
+    overflow: auto;
+
+    @include anim-fade(fade-in, .3s);
+  }
+
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  &__contacts {
+    display: grid;
+    row-gap: 24px;
+    justify-items: start;
+  }
+
+  @include media-min ($xl) {
+    display: none;
+  }
+}

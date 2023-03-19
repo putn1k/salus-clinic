@@ -1,0 +1,37 @@
+.staff {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  &__top {
+    margin-bottom: 24px;
+  }
+
+  &__title {
+    color: var(--accent);
+    text-align: center;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  @include media-min ($xl) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    &__top {
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__control {
+      width: 100px;
+    }
+
+    &__title {
+      text-align: left;
+    }
+  }
+}

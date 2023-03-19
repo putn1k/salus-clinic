@@ -1,0 +1,61 @@
+.advantages {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  &__title {
+    color: var(--cyan);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    padding: 1em;
+    padding-left: 72px;
+    font-size: 14px;
+    font-weight: 300;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='44' fill='%23BA3288'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M37.675 37.6031H28.375C23.1969 37.6031 19 41.8 19 46.9781V53.3C19 58.4781 23.1969 62.675 28.375 62.675H37.675V72.0438C37.675 77.2219 41.8719 81.4188 47.05 81.4188H53.3719C58.55 81.4188 62.7469 77.2219 62.7469 72.0438V62.675H72.125C77.3031 62.675 81.5 58.4781 81.5 53.3V46.9781C81.5 41.8 77.3031 37.6031 72.125 37.6031H62.7469V28.375C62.7469 23.1969 58.55 19 53.3719 19H47.05C41.8719 19 37.675 23.1969 37.675 28.375V37.6031ZM40.8 43.8531C42.525 43.8531 43.925 42.4531 43.925 40.7281V28.375C43.925 26.6469 45.3219 25.25 47.05 25.25H53.3719C55.0969 25.25 56.4969 26.6469 56.4969 28.375V40.7281C56.4969 42.4531 57.8938 43.8531 59.6219 43.8531H72.125C73.85 43.8531 75.25 45.25 75.25 46.9781V53.3C75.25 55.025 73.85 56.425 72.125 56.425H59.6219C57.8938 56.425 56.4969 57.8219 56.4969 59.55V72.0438C56.4969 73.7719 55.0969 75.1688 53.3719 75.1688H47.05C45.3219 75.1688 43.925 73.7719 43.925 72.0438V59.55C43.925 57.8219 42.525 56.425 40.8 56.425H28.375C26.65 56.425 25.25 55.025 25.25 53.3V46.9781C25.25 45.25 26.65 43.8531 28.375 43.8531H40.8Z' fill='white'/%3E%3C/svg%3E ");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.3;
+    }
+  }
+
+  &__lead-text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  @include media-min ($md) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+
+    &__title {
+      margin-bottom: 32px;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+:root {
+  --white: #ffffff;
+  --black: #2e2b2b;
+  --accent: #ba3288;
+  --cyan: #007ec3;
+  --cyan10: #e2f3fd;
+  --gray: #efefef;
+  --error: rgba(227, 6, 19, 0.2);
+  --black70: rgba(0, 0, 0, 0.7)
+}
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$main-font: "Roboto";
+$heading-font: "Playfair Display";
+$mobile-min-width: 360px;

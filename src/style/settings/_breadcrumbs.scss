@@ -1,1 +1,13 @@
-// .breadcrumbs {}
+.breadcrumbs {
+  padding: 2em 0 1em;
+
+  @include media-min ($xl) {
+    padding: 2.5em 0 1.4em;
+
+    & a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

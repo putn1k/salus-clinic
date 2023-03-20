@@ -33,7 +33,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
   // Settings
   // ---------------------------------
   iosVhFix();
-  new JustPhoneMask( Options.Mask.bodyMask );
+  new JustPhoneMask( Options.Mask );
 
   // Modules
   // ---------------------------------

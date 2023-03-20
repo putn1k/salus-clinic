@@ -170,6 +170,53 @@ input[type=checkbox].visually-hidden {
   background-color: var(--scrollbar);
 }
 
+.policy {
+  padding-bottom: 3em;
+
+  line-height: 1.5;
+  text-align: justify;
+}
+.policy ol {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.policy li {
+  margin: 1em 0;
+}
+.policy > ol {
+  counter-reset: num1;
+}
+.policy > ol > li {
+  font-weight: 500;
+
+  counter-increment: num1;
+}
+.policy > ol > li::before {
+  content: counter(num1) ". ";
+}
+.policy > ol > li > ol {
+  counter-reset: num2;
+}
+.policy > ol > li > ol > li {
+  font-weight: 400;
+
+  counter-increment: num2;
+}
+.policy > ol > li > ol > li::before {
+  content: counter(num1) "." counter(num2) ". ";
+}
+.policy > ol > li > ol > li > ol {
+  counter-reset: num3;
+}
+.policy > ol > li > ol > li > ol > li {
+  counter-increment: num3;
+}
+.policy > ol > li > ol > li > ol > li::before {
+  content: counter(num1) "." counter(num2) "." counter(num3) ". ";
+}
+
 body {
   font-weight: 400;
   font-size: 16px;
@@ -511,6 +558,18 @@ strong {
   }
 }
 
+.breadcrumbs {
+  padding: 2em 0 1em;
+}
+@media (min-width: 1200px) {
+  .breadcrumbs {
+    padding: 2.5em 0 1.4em;
+  }
+  .breadcrumbs a:hover {
+    text-decoration: none;
+  }
+}
+
 .anim-fade-down {
   -webkit-animation-name: fade-down;
           animation-name: fade-down;
@@ -734,6 +793,42 @@ strong {
 @media (min-width: 1200px) {
   .contacts a:hover {
     text-decoration: underline;
+  }
+}
+
+.not-found {
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+  text-align: center;
+}
+.not-found__cover {
+  display: block;
+  width: 335px;
+  height: 135px;
+  margin-right: auto;
+  margin-bottom: 24px;
+  margin-left: auto;
+}
+.not-found__title {
+  margin-bottom: 1.5em;
+}
+@media (min-width: 768px) {
+  .not-found__content {
+    max-width: 730px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .not-found__cover {
+    width: 470px;
+    height: 182px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .not-found {
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 }
 
@@ -1661,7 +1756,7 @@ strong {
   .site-contacts__bottom {
     position: relative;
   }
-  .site-contacts__block {
+  .site-contacts__abs-pos {
     position: absolute;
     top: 50%;
     z-index: 1;

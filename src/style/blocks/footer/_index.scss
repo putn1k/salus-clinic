@@ -1,1 +1,123 @@
-// .site-footer {}
+.site-footer {
+  padding-top: 4em;
+  padding-bottom: 4em;
+  color: var(--black);
+  background-color: var(--gray);
+
+  &__attention-text {
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.3;
+    margin-bottom: 2em;
+  }
+
+  &__copyright {
+    margin-bottom: 3em;
+  }
+
+  &__details {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__logo {
+    display: block;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+
+  &__copyright-text {
+    position: relative;
+    padding-top: 16px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--accent);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & a {
+      color: var(--black);
+      margin-bottom: 16px;
+      text-decoration: none;
+    }
+  }
+
+  @include media-min ($md) {
+    &__attention-text {
+      font-size: 24px;
+    }
+
+    &__copyright {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &__details {
+      flex-direction: column;
+      flex-shrink: 0;
+      margin-bottom: 0;
+      margin-right: 16px;
+    }
+
+    &__logo {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+
+    &__copyright-text {
+      padding-top: 0;
+      padding-left: 16px;
+
+      &::before {
+        width: 2px;
+        height: 100%;
+      }
+    }
+
+    &__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__details {
+      flex-direction: row;
+    }
+
+    &__logo {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__bottom {
+      & a {
+        transition: color .15s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

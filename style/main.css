@@ -950,14 +950,16 @@ strong {
   .header-main__desktop {
     display: flex;
     flex-grow: 1;
-    justify-content: space-between;
   }
   .header-main__nav {
     display: flex;
+    flex-grow: 1;
+    justify-content: center;
     align-items: center;
   }
   .header-main__contacts {
     display: flex;
+    margin-left: 30px;
   }
   .header-main__phones {
     display: grid;

@@ -1,0 +1,49 @@
+.action-card {
+  border: 1px solid var(--gray);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 1px 1px 10px 1px var(--cyan10);
+
+  &__poster {
+    display: block;
+    width: 100%;
+    max-height: 330px;
+    border-bottom: 1px solid var(--gray);
+  }
+
+  &__wrapper-text {
+    padding: 24px 16px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: var(--accent);
+  }
+
+  &__period {
+    font-weight: 500;
+  }
+
+  @include media-min ($lg) {
+    &__poster {
+      max-height: 400px;
+    }
+  }
+
+  @include media-min ($xl) {
+    display: flex;
+    min-height: 300px;
+
+    & > * {
+      flex-basis: 100%;
+    }
+
+    &__poster {
+      width: auto;
+      max-width: 50%;
+      max-height: 100%;
+      border-right: 1px solid var(--gray);
+      border-bottom: none;
+    }
+  }
+}

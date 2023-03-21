@@ -1,0 +1,29 @@
+.actions {
+  padding-top: 1em;
+  padding-bottom: 2em;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 10px;
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 3em;
+
+    &__list {
+      gap: 20px;
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 4em;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+}

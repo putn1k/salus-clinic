@@ -1,5 +1,6 @@
 .breadcrumbs {
   padding: 2em 0 1em;
+  font-weight: 300;
 
   @include media-min ($xl) {
     padding: 2.5em 0 1.4em;

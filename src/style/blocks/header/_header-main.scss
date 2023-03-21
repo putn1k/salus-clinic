@@ -129,17 +129,19 @@
 
     &__desktop {
       display: flex;
-      justify-content: space-between;
       flex-grow: 1;
     }
 
     &__nav {
       display: flex;
+      justify-content: center;
       align-items: center;
+      flex-grow: 1;
     }
 
     &__contacts {
       display: flex;
+      margin-left: 30px;
     }
 
     &__phones {

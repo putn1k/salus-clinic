@@ -1,22 +1,52 @@
-<div class="hystmodal hystmodal--simple" id="record-modal" aria-hidden="true">
+<div class="hystmodal hystmodal--simple"
+     id="record-modal"
+     aria-hidden="true">
   <div class="hystmodal__wrap">
-    <div class="hystmodal__window hystmodal__window--form" role="dialog" aria-modal="true">
+    <div class="hystmodal__window hystmodal__window--form"
+         role="dialog"
+         aria-modal="true">
       <div class="modal">
-        <button class="btn-reset modal__close" type="button" aria-label="Закрыть окно" data-hystclose>
-          <svg class="modal__close-icon" width="18" height="18" aria-hidden="true">
+        <button class="btn-reset modal__close"
+                type="button"
+                aria-label="Закрыть окно"
+                data-hystclose>
+          <svg class="modal__close-icon"
+               width="18"
+               height="18"
+               aria-hidden="true">
             <use xlink:href="img/sprite.svg#icon-cross"></use>
           </svg>
         </button>
         <p class="indent-reset hd hd--h3 modal__title">Записаться на прием</p>
-        <form class="form modal__form" id="record-modal-form" data-validate>
-          <div><input class="form__input" type="text" name="Имя" placeholder="Ваше Имя *" required data-validate="text"></div>
-          <div><input class="form__input" type="tel" name="Контактный&nbsp;телефон" placeholder="Контактный телефон *" required data-validate="phone"></div>
-          <div><textarea class="form__input form__textarea" name="Дополнительная информация" placeholder="Дополнительная информация к записи"></textarea></div>
+        <form class="form modal__form"
+              id="record-modal-form"
+              data-validate>
+          <div><input class="form__input"
+                   type="text"
+                   name="Имя"
+                   placeholder="Ваше Имя *"
+                   required
+                   data-validate="text"></div>
+          <div><input class="form__input"
+                   type="tel"
+                   name="Контактный&nbsp;телефон"
+                   placeholder="Контактный телефон *"
+                   required
+                   data-validate="phone"></div>
+          <div><textarea class="form__input form__textarea"
+                      name="Дополнительная информация"
+                      placeholder="Дополнительная информация к записи"></textarea></div>
           <div>
-            <input class="form__checkbox" type="checkbox" id="record-modal-confirm" required data-validate="confirm">
-            <label class="small" for="record-modal-confirm">@include('../utils/confirm-text.html')</label>
+            <input class="form__checkbox"
+                   type="checkbox"
+                   id="record-modal-confirm"
+                   required
+                   data-validate="confirm">
+            <label class="small"
+                   for="record-modal-confirm">@include('../utils/confirm-text.html')</label>
           </div>
-          <div><button class="btn-reset btn" type="submit">Отправить</button></div>
+          <div><button class="btn-reset btn"
+                    type="submit">Отправить</button></div>
         </form>
       </div>
     </div>

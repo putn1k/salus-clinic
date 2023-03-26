@@ -1,0 +1,32 @@
+.pricing {
+  padding-top: 1em;
+  padding-bottom: 2em;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    max-width: 760px;
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 3em;
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 4em;
+
+    &__title {
+      margin-bottom: 32px;
+    }
+
+    &__descr {
+      margin-bottom: 50px;
+    }
+  }
+}

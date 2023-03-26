@@ -1,0 +1,89 @@
+.price-list {
+  &__group {
+    &[open] {
+      & > .price-list__title {
+        &::after {
+          transform: rotate(135deg);
+        }
+      }
+
+      & > .price-list__content {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: block;
+    margin: 4px 0;
+    padding: 8px 18px;
+    padding-right: 36px;
+    color: var(--cyan);
+    background-color: var(--cyan10);
+    border-radius: 4px;
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 8px;
+      z-index: 1;
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.8 7.8V1.2C7.8 0.88174 7.92643 0.576516 8.15147 0.351472C8.37652 0.126428 8.68174 0 9 0C9.31824 0 9.62352 0.126428 9.84852 0.351472C10.0736 0.576516 10.2 0.88174 10.2 1.2V7.8H16.8C17.1183 7.8 17.4235 7.92643 17.6486 8.15147C17.8736 8.37652 18 8.68174 18 9C18 9.31824 17.8736 9.62352 17.6486 9.84852C17.4235 10.0736 17.1183 10.2 16.8 10.2L10.2 10.2L10.2 16.8C10.2 17.1183 10.0736 17.4235 9.84852 17.6486C9.62352 17.8736 9.31824 18 9 18C8.68174 18 8.37652 17.8736 8.15147 17.6486C7.92643 17.4235 7.8 17.1183 7.8 16.8V10.2H1.2C0.88174 10.2 0.576516 10.0736 0.351472 9.84852C0.126428 9.62352 0 9.31824 0 9C0 8.68174 0.126428 8.37652 0.351472 8.15147C0.576516 7.92643 0.88174 7.8 1.2 7.8H7.8Z' fill='%23007ec3'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 50%;
+      transition: transform .25s ease-in-out;
+    }
+  }
+
+  &__search {
+    margin-bottom: 12px;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    & td {
+      padding: 4px 8px;
+      border: 1px solid var(--gray);
+      vertical-align: top;
+
+      &:first-of-type {
+        width: 100%;
+      }
+
+      &:last-of-type {
+        white-space: nowrap;
+
+        &::after {
+          content: ' \20BD';
+        }
+      }
+    }
+  }
+
+  &__results {
+    display: none;
+
+    &--founded {
+      display: block;
+      margin-bottom: 2em;
+    }
+  }
+}

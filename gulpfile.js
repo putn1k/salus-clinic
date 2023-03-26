@@ -39,6 +39,7 @@ const RASTER_FILES = [
   `${Path.Src}${Path.Img}**/*.jpg`,
   `${Path.Src}${Path.Img}**/*.jpeg`,
   `${Path.Src}${Path.Img}**/*.png`,
+  `${Path.Src}${Path.Img}**/*.gif`,
   `${Path.Src}${Path.Img}**/*.webp`
 ];
 const VECTOR_FILES = [

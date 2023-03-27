@@ -1,6 +1,7 @@
 .modal {
   position: relative;
-  margin: 1em;
+  margin-left: auto;
+  margin-right: auto;
   padding: 2em 1.5em;
   width: calc(100% - 2em);
   max-width: 360px;
@@ -24,7 +25,8 @@
     margin-bottom: 24px;
   }
 
-  &__form {
+  &__form,
+  & #wpmtst-submission-form {
     display: grid;
     row-gap: 12px;
   }
@@ -45,5 +47,11 @@
     &__title {
       margin-bottom: 30px;
     }
+  }
+}
+
+.hystmodal {
+  &__wrap {
+    align-items: stretch;
   }
 }

@@ -3,7 +3,13 @@
   height: auto;
   min-height: 280px;
 
-  &__wrapper {
+  & .testimonials-display,
+  & .strong-content,
+  & .testimonial {
+    height: 100%;
+  }
+
+  & .testimonial-inner {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -31,7 +37,7 @@
     }
   }
 
-  &__quote {
+  & .testimonial-content {
     position: relative;
     flex: 1 1 auto;
     padding-left: 16px;
@@ -48,14 +54,16 @@
     }
   }
 
-  &__author {
-    font-style: normal;
+  & .testimonial-name {
+    font-size: 14px;
     font-weight: 300;
     margin-top: 24px;
   }
 
   @include media-min ($xl) {
-    &__wrapper {
+    min-height: 300px;
+
+    & .testimonial-inner {
       padding: 30px 24px;
       max-width: 920px;
 
@@ -68,8 +76,12 @@
       }
     }
 
-    &__quote {
+    & .testimonial-content {
       font-size: 18px;
+    }
+
+    & .testimonial-name {
+      font-size: 16px;
     }
   }
 }

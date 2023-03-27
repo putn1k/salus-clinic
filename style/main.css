@@ -1,11 +1,12 @@
+@charset "UTF-8";
 :root {
   --accent: #ba3288;
   --black: #2e2b2b;
   --black70: rgba(0, 0, 0, 0.7) ;
   --cyan: #007ec3;
   --cyan10: #e2f3fd;
-  --error: rgba(227, 6, 19, 0.2);
   --gray: #efefef;
+  --red: #f72d2d;
   --white: #ffffff;
 }
 
@@ -1854,4 +1855,198 @@ strong {
     border-right: 1px solid var(--gray);
     border-bottom: none;
   }
+}
+
+.pricing {
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+.pricing__title {
+  margin-bottom: 24px;
+}
+.pricing__descr {
+  margin-bottom: 40px;
+}
+.pricing__list {
+  max-width: 760px;
+}
+@media (min-width: 768px) {
+  .pricing {
+    padding-bottom: 3em;
+  }
+}
+@media (min-width: 1200px) {
+  .pricing {
+    padding-bottom: 4em;
+  }
+  .pricing__title {
+    margin-bottom: 32px;
+  }
+  .pricing__descr {
+    margin-bottom: 50px;
+  }
+}
+
+.price-list__group[open] > .price-list__title::after {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.price-list__group[open] > .price-list__content {
+  display: block;
+}
+.price-list__title {
+  position: relative;
+
+  display: block;
+  margin: 4px 0;
+  padding: 8px 18px;
+  padding-right: 36px;
+
+  list-style: none;
+  color: var(--cyan);
+
+  background-color: var(--cyan10);
+  border-radius: 4px;
+  cursor: pointer;
+
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.price-list__title::-webkit-details-marker {
+  display: none;
+}
+.price-list__title::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  z-index: 1;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.8 7.8V1.2C7.8 0.88174 7.92643 0.576516 8.15147 0.351472C8.37652 0.126428 8.68174 0 9 0C9.31824 0 9.62352 0.126428 9.84852 0.351472C10.0736 0.576516 10.2 0.88174 10.2 1.2V7.8H16.8C17.1183 7.8 17.4235 7.92643 17.6486 8.15147C17.8736 8.37652 18 8.68174 18 9C18 9.31824 17.8736 9.62352 17.6486 9.84852C17.4235 10.0736 17.1183 10.2 16.8 10.2L10.2 10.2L10.2 16.8C10.2 17.1183 10.0736 17.4235 9.84852 17.6486C9.62352 17.8736 9.31824 18 9 18C8.68174 18 8.37652 17.8736 8.15147 17.6486C7.92643 17.4235 7.8 17.1183 7.8 16.8V10.2H1.2C0.88174 10.2 0.576516 10.0736 0.351472 9.84852C0.126428 9.62352 0 9.31824 0 9C0 8.68174 0.126428 8.37652 0.351472 8.15147C0.576516 7.92643 0.88174 7.8 1.2 7.8H7.8Z' fill='%23007ec3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition:         transform 0.25s ease-in-out;
+  transition:         transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
+}
+.price-list__search {
+  margin-bottom: 12px;
+}
+.price-list__content {
+  display: none;
+}
+.price-list__table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+.price-list__table td {
+  padding: 4px 8px;
+
+  vertical-align: top;
+
+  border: 1px solid var(--gray);
+}
+.price-list__table td:first-of-type {
+  width: 100%;
+}
+.price-list__table td:last-of-type {
+  white-space: nowrap;
+}
+.price-list__table td:last-of-type::after {
+  content: " ₽";
+}
+.price-list__results {
+  display: none;
+}
+.price-list__results--founded {
+  display: block;
+  margin-bottom: 2em;
+}
+.price-list__results--no-results .price-list__no-results-text {
+  display: block;
+}
+.price-list__no-results-text {
+  display: none;
+}
+
+.pricing-search {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  max-width: 400px;
+}
+.pricing-search::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+
+  width: 20px;
+  height: 20px;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.7349 13.7349C10.9311 16.5388 6.38521 16.5388 3.58139 13.7349C0.777559 10.9311 0.777559 6.38521 3.58139 3.58139C6.38521 0.777559 10.9311 0.777559 13.7349 3.58139C16.5388 6.38521 16.5388 10.9311 13.7349 13.7349ZM13.7349 13.7349L20.5209 20.5209' stroke='%23007ec3' stroke-width='1.5'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  pointer-events: none;
+}
+.pricing-search::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 3px;
+  z-index: 1;
+
+  display: none;
+  width: 32px;
+  height: 32px;
+
+  background-image: url("../img/loader.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  pointer-events: none;
+}
+.pricing-search--on-alert .pricing-search__alert {
+  display: block;
+}
+.pricing-search--loading::after {
+  display: inline-block;
+}
+.pricing-search__input {
+  width: 100%;
+  padding: 12px 36px;
+
+  font-size: 16px;
+
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  outline: none;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.pricing-search__input:focus {
+  border-color: var(--black);
+}
+.pricing-search__alert {
+  display: none;
+  padding-top: 4px;
+
+  font-weight: 500;
+  color: var(--red);
 }

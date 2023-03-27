@@ -27,6 +27,10 @@ import {
   initMap
 } from './modules/map.js';
 
+import {
+  initPriceSearching
+} from './modules/search.js';
+
 // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
 // в load следует добавить скрипты, не участвующие в работе первого экрана
 document.addEventListener( 'DOMContentLoaded', () => {
@@ -47,5 +51,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     initScrollTop();
     validateForms();
     initMap();
+    initPriceSearching();
   } );
 } );

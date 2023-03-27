@@ -85,5 +85,15 @@
       display: block;
       margin-bottom: 2em;
     }
+
+    &--no-results {
+      & .price-list__no-results-text {
+        display: block;
+      }
+    }
+  }
+
+  &__no-results-text {
+    display: none;
   }
 }

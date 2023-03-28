@@ -26,7 +26,8 @@
   }
 
   &__form,
-  & #wpmtst-submission-form {
+  & #wpmtst-submission-form,
+  & .wpmtst-submission-form {
     display: grid;
     row-gap: 12px;
   }

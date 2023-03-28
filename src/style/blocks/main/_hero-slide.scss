@@ -24,7 +24,7 @@
     text-align: center;
   }
 
-  &__text--wrapper {
+  &__text-wrapper {
     display: grid;
     row-gap: 18px;
     justify-items: center;
@@ -92,7 +92,7 @@
       }
     }
 
-    &__text--wrapper {
+    &__text-wrapper {
       justify-items: start;
     }
 

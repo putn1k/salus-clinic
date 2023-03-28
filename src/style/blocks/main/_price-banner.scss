@@ -10,6 +10,10 @@
 
   &__text {
     margin-bottom: 30px;
+
+    & a {
+      color: var(--white);
+    }
   }
 
   @include media-min ($md) {

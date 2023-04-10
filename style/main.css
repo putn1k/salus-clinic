@@ -437,7 +437,7 @@ strong {
 .form-field textarea:focus {
   border-color: var(--black);
 }
-.form-field .button {
+.form-field .wpmtst_submit_testimonial {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -461,10 +461,10 @@ strong {
   -webkit-tap-highlight-color: transparent;
 }
 @media (min-width: 1200px) {
-  .form-field .button {
+  .form-field .wpmtst_submit_testimonial {
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   }
-  .form-field .button:hover {
+  .form-field .wpmtst_submit_testimonial:hover {
     color: var(--black);
 
     background-color: var(--white);
@@ -547,7 +547,8 @@ strong {
   margin-bottom: 24px;
 }
 .modal__form,
-.modal #wpmtst-submission-form {
+.modal #wpmtst-submission-form,
+.modal .wpmtst-submission-form {
   display: grid;
 
   row-gap: 12px;
@@ -1389,7 +1390,7 @@ strong {
 
   background-color: var(--white);
 }
-.hero-slide__text--wrapper {
+.hero-slide__text-wrapper {
   display: grid;
 
   justify-items: center;
@@ -1455,7 +1456,7 @@ strong {
     right: auto;
     left: calc((100% - 1080px) / 2);
   }
-  .hero-slide__text--wrapper {
+  .hero-slide__text-wrapper {
     justify-items: start;
   }
   .hero-slide__heading {
@@ -1469,9 +1470,7 @@ strong {
 }
 .features__banner {
   margin-bottom: 1.5em;
-  padding: 1.4em 1em;
 
-  text-align: center;
   color: var(--white);
 
   background-color: var(--accent);
@@ -1519,6 +1518,28 @@ strong {
     width: 100px;
     height: 100px;
   }
+}
+
+.services {
+  padding: 1.4em 1em;
+}
+.services__title {
+  margin-bottom: 16px;
+
+  text-align: center;
+}
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -5px;
+}
+.services__list > li {
+  margin: 5px;
+  padding: 0.4em 1.4em;
+
+  border: 1px solid currentColor;
+  border-radius: 99em;
 }
 
 .advantages {
@@ -1629,20 +1650,22 @@ strong {
 }
 .staff-person__photo img {
   display: block;
-  width: 300px;
+  width: 245px;
   height: 300px;
 }
 .staff-person__meta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 300px;
+  max-width: 245px;
   height: 100%;
   padding: 16px;
 }
 .staff-person__main {
   display: grid;
   margin-bottom: 16px;
+
+  text-align: center;
 
   justify-items: center;
   row-gap: 8px;
@@ -1669,6 +1692,9 @@ strong {
 }
 .price-banner__text {
   margin-bottom: 30px;
+}
+.price-banner__text a {
+  color: var(--white);
 }
 @media (min-width: 768px) {
   .price-banner__descr {
@@ -1736,7 +1762,7 @@ strong {
 .testimonials-item .testimonial-inner {
   position: relative;
 
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: flex-end;
   width: 100%;

@@ -1,0 +1,22 @@
+.services {
+  padding: 1.4em 1em;
+
+  &__title {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -5px;
+
+    & > li {
+      margin: 5px;
+      padding: 0.4em 1.4em;
+      border: 1px solid currentColor;
+      border-radius: 99em;
+    }
+  }
+}

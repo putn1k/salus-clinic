@@ -1536,10 +1536,29 @@ strong {
 }
 .services__list > li {
   margin: 5px;
+}
+.services__list a {
+  display: inline-block;
   padding: 0.4em 1.4em;
+
+  color: inherit;
 
   border: 1px solid currentColor;
   border-radius: 99em;
+
+  text-decoration-color: transparent;
+}
+@media (min-width: 992px) {
+  .services__list a {
+    font-size: 18px;
+
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  }
+  .services__list a:hover {
+    color: var(--accent);
+
+    background-color: var(--white);
+  }
 }
 
 .advantages {
@@ -1645,6 +1664,18 @@ strong {
   align-items: center;
   height: auto;
 }
+.staff-person__meta {
+  position: relative;
+
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin-bottom: 12px;
+
+  text-align: center;
+}
 .staff-person__photo {
   flex-shrink: 0;
 }
@@ -1653,30 +1684,30 @@ strong {
   width: 245px;
   height: 300px;
 }
-.staff-person__meta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 245px;
-  height: 100%;
-  padding: 16px;
-}
 .staff-person__main {
-  display: grid;
-  margin-bottom: 16px;
-
   text-align: center;
-
-  justify-items: center;
-  row-gap: 8px;
 }
 .staff-person__name {
+  margin: 6px 0;
+
   font-weight: 500;
   font-size: 18px;
 }
+.staff-person__expirience {
+  margin-bottom: 12px;
+}
+.staff-person__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+}
 .staff-person__btn {
   margin-top: auto;
-  padding: 12px 24px;
 }
 
 .price-banner {
@@ -2163,4 +2194,195 @@ strong {
 
   font-weight: 500;
   color: var(--red);
+}
+
+.personal {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+.personal__title {
+  margin-bottom: 24px;
+}
+.personal__list {
+  display: grid;
+
+  gap: 30px;
+}
+@media (min-width: 768px) {
+  .personal {
+    padding-bottom: 80px;
+  }
+  .personal__title {
+    margin-bottom: 30px;
+  }
+  .personal__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .personal__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .personal {
+    padding-bottom: 100px;
+  }
+  .personal__title {
+    margin-bottom: 40px;
+  }
+  .personal__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.staff-card__photo {
+  text-align: center;
+}
+.staff-card__meta {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+.staff-card__name {
+  margin-bottom: 12px;
+}
+.staff-card__short-descr {
+  margin-bottom: 6px;
+}
+.staff-card__expirience {
+  margin-bottom: 12px;
+}
+.staff-card__spec-list {
+  display: flex;
+  justify-content: center;
+  margin: -6px;
+  margin-bottom: 24px;
+}
+.staff-card__spec-list > li {
+  margin: 6px;
+
+  font-size: 14px;
+}
+.staff-card__spec-list a {
+  display: inline-block;
+  padding: 2px 6px;
+
+  color: var(--white);
+
+  background-color: var(--accent);
+  border-radius: 99em;
+
+  text-decoration-color: transparent;
+}
+.staff-card__descr.is-hide .staff-card__descr-content {
+  position: relative;
+
+  max-height: 80px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.staff-card__descr.is-hide .staff-card__descr-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(to top, var(--white), transparent);
+
+  pointer-events: none;
+}
+.staff-card__descr.is-hide .staff-card__show-info {
+  display: inline-block;
+}
+.staff-card__descr-content > *:first-child {
+  margin-top: 0;
+}
+.staff-card__descr-content > *:last-child {
+  margin-bottom: 0;
+}
+.staff-card__show-info {
+  display: none;
+
+  text-decoration: underline;
+}
+@media (min-width: 768px) {
+  .staff-card {
+    padding-top: 30px;
+  }
+  .staff-card__top {
+    display: grid;
+    align-items: start;
+    margin-bottom: 30px;
+
+            column-gap: 60px;
+
+    -webkit-column-gap: 60px;
+       -moz-column-gap: 60px;
+    grid-template-columns: 245px auto;
+  }
+  .staff-card__photo {
+    text-align: left;
+  }
+  .staff-card__meta {
+    max-width: 500px;
+    margin-bottom: 0;
+    padding-top: 12px;
+
+    text-align: left;
+  }
+  .staff-card__spec-list {
+    justify-content: flex-start;
+  }
+  .staff-card__descr {
+    max-width: 800px;
+  }
+}
+@media (min-width: 992px) {
+  .staff-card__descr.is-hide .staff-card__descr-content {
+    max-height: none;
+    overflow: visible;
+  }
+  .staff-card__descr.is-hide .staff-card__descr-content::after {
+    display: none;
+  }
+  .staff-card__descr.is-hide .staff-card__show-info {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .staff-card__spec-list a {
+    border: 1px solid currentColor;
+
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  }
+  .staff-card__spec-list a:hover {
+    color: var(--accent);
+
+    background-color: var(--white);
+  }
+}
+
+.staff-record {
+  padding: 60px 0;
+}
+.staff-record__title {
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .staff-record {
+    padding: 80px 0;
+  }
+  .staff-record__title {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .staff-record__title {
+    margin-bottom: 40px;
+  }
 }

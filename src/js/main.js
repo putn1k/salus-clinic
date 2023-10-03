@@ -4,7 +4,8 @@ import {
 
 import {
   iosVhFix,
-  initSlider
+  initSlider,
+  initBlockShower
 } from './modules/utils.js';
 
 import {
@@ -52,5 +53,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
     validateForms();
     initMap();
     initPriceSearching();
+    initBlockShower();
   } );
 } );

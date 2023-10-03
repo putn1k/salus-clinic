@@ -41,3 +41,13 @@
   animation-fill-mode: forwards;
   animation-duration: $animation-time;
 }
+
+@mixin cms-text {
+  &>*:first-child {
+    margin-top: 0;
+  }
+
+  &>*:last-child {
+    margin-bottom: 0;
+  }
+}

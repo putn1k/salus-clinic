@@ -1,0 +1,209 @@
+.personal {
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: grid;
+    gap: 30px;
+  }
+
+  @include media-min ($md) {
+    padding-bottom: 80px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include media-min ($lg) {
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include media-min ($xl) {
+    padding-bottom: 100px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.staff-card {
+  &__photo {
+    text-align: center;
+  }
+
+  &__meta {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  &__name {
+    margin-bottom: 12px;
+  }
+
+  &__short-descr {
+    margin-bottom: 6px;
+  }
+
+  &__expirience {
+    margin-bottom: 12px;
+  }
+
+  &__spec-list {
+    display: flex;
+    justify-content: center;
+    margin: -6px;
+    margin-bottom: 24px;
+
+    &>li {
+      font-size: 14px;
+      margin: 6px;
+    }
+
+    & a {
+      display: inline-block;
+      padding: 2px 6px;
+      color: var(--white);
+      background-color: var(--accent);
+      border-radius: 99em;
+      text-decoration-color: transparent;
+    }
+  }
+
+  &__descr {
+    &.is-hide {
+      & .staff-card__descr-content {
+        position: relative;
+        max-height: 80px;
+        overflow: hidden;
+        margin-bottom: 12px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          background-image: linear-gradient(to top, var(--white), transparent);
+        }
+      }
+
+      & .staff-card__show-info {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__descr-content {
+    @include cms-text;
+  }
+
+  &__show-info {
+    display: none;
+    text-decoration: underline;
+  }
+
+  @include media-min ($md) {
+    padding-top: 30px;
+
+    &__top {
+      display: grid;
+      grid-template-columns: 245px auto;
+      align-items: start;
+      column-gap: 60px;
+      margin-bottom: 30px;
+    }
+
+    &__photo {
+      text-align: left;
+    }
+
+    &__meta {
+      margin-bottom: 0;
+      padding-top: 12px;
+      text-align: left;
+      max-width: 500px;
+    }
+
+    &__spec-list {
+      justify-content: flex-start;
+    }
+
+    &__descr {
+      max-width: 800px;
+    }
+  }
+
+  @include media-min ($lg) {
+    &__descr {
+      &.is-hide {
+        & .staff-card__descr-content {
+          max-height: none;
+          overflow: visible;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        & .staff-card__show-info {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include media-min ($xl) {
+    &__spec-list {
+      & a {
+        border: 1px solid currentColor;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out;
+
+        &:hover {
+          color: var(--accent);
+          background-color: var(--white);
+        }
+      }
+    }
+  }
+}
+
+.staff-record {
+  padding: 60px 0;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  @include media-min ($md) {
+    padding: 80px 0;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include media-min ($xl) {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}

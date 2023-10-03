@@ -79,6 +79,16 @@ const initSlider = ( selector, options ) => {
   return new Swiper( document.querySelector( selector ), options );
 };
 
+const initBlockShower = () => {
+  const triggerBtnNodes = document.querySelectorAll( '[data-shower-btn]' );
+  triggerBtnNodes.forEach( ( btn ) => {
+    btn.addEventListener( 'click', ( evt ) => {
+      evt.preventDefault();
+      evt.target.closest( '[data-shower-block]' ).classList.remove( 'is-hide' );
+    } );
+  } );
+};
+
 export {
   debounce,
   throttle,
@@ -87,5 +97,6 @@ export {
   isEscKey,
   addLeadZero,
   iosVhFix,
-  initSlider
+  initSlider,
+  initBlockShower
 };
